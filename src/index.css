@@ -4,6 +4,38 @@
   box-sizing: border-box;
 }
 
+/* Override Prism theme to match app dark theme */
+pre[class*="language-"],
+code[class*="language-"] {
+  background: transparent !important;
+  text-shadow: none !important;
+}
+pre[class*="language-"] {
+  background: #0d1117 !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 14px !important;
+}
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: #6a737d !important; }
+.token.keyword { color: #ff7b72 !important; }
+.token.string, .token.template-string { color: #a5d6ff !important; }
+.token.number { color: #79c0ff !important; }
+.token.boolean { color: #79c0ff !important; }
+.token.function { color: #d2a8ff !important; }
+.token.operator { color: #ff7b72 !important; }
+.token.punctuation { color: #c9d1d9 !important; }
+.token.class-name { color: #ffa657 !important; }
+.token.constant { color: #79c0ff !important; }
+.token.property { color: #7ee787 !important; }
+.token.parameter { color: #ffa657 !important; }
+.token.regex { color: #7ee787 !important; }
+
+/* Diagram SVG responsive */
+.diagram-container svg {
+  width: 100%;
+  height: auto;
+}
+
 
 /* :root {
   --text: #6b6375;
