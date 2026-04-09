@@ -1,5 +1,22 @@
+import { MODULE1_TOPICS } from "./module1-python";
+import { MODULE2_TOPICS } from "./module2-tooling";
+import { MODULE3_TOPICS } from "./module3-ai";
+import { MODULE4_TOPICS } from "./module4-prompts";
+import { MODULE5_TOPICS } from "./module5-llm";
+import { MODULE6_TOPICS } from "./module6-rag";
+import { MODULE7_TOPICS } from "./module7-langchain";
+import { MODULE8_TOPICS } from "./module8-agents";
+
 // ─── ALL TOPICS DATA ───
 export const TOPICS = [
+  ...MODULE1_TOPICS,
+  ...MODULE2_TOPICS,
+  ...MODULE3_TOPICS,
+  ...MODULE4_TOPICS,
+  ...MODULE5_TOPICS,
+  ...MODULE6_TOPICS,
+  ...MODULE7_TOPICS,
+  ...MODULE8_TOPICS,
   {
     id: "closures",
     category: "JavaScript",
@@ -5248,4 +5265,15 @@ export const CATEGORIES = {
   "Caching": { color: "#d2a8ff", bg: "#d2a8ff15", icon: "💾" },
   "System Design": { color: "#f0883e", bg: "#f0883e15", icon: "🏗️" },
   "Machine Coding": { color: "#f85149", bg: "#f8514915", icon: "⌨️" },
+  "Python Foundations": { color: "#3572A5", bg: "#3572A515", icon: "🐍" },
+  "Tooling": { color: "#2496ED", bg: "#2496ED15", icon: "🐳" },
+  "AI Fundamentals": { color: "#FF6F61", bg: "#FF6F6115", icon: "🧠" },
+  "Prompt Engineering": { color: "#F4A261", bg: "#F4A26115", icon: "✍️" },
+  "LLM Integration": { color: "#06D6A0", bg: "#06D6A015", icon: "🤖" },
+  "RAG": { color: "#118AB2", bg: "#118AB215", icon: "📚" },
+  "LangChain": { color: "#1C3C3C", bg: "#1C3C3C15", icon: "🔗" },
+  "AI Agents": { color: "#E63946", bg: "#E6394615", icon: "🕵️" },
+  "Multi-Modal AI": { color: "#A8DADC", bg: "#A8DADC15", icon: "🖼️" },
+  "Backend & Deployment": { color: "#457B9D", bg: "#457B9D15", icon: "🚀" },
+  "Capstone": { color: "#FFD700", bg: "#FFD70015", icon: "🏆" },
 };

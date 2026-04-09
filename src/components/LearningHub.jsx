@@ -6,6 +6,7 @@ import WelcomeScreen from "./WelcomeScreen";
 import LearnTab from "./LearnTab";
 import ExamplesTab from "./ExamplesTab";
 import QuizTab from "./QuizTab";
+import FlashcardsTab from "./FlashcardsTab";
 
 // ─── MAIN APP ───
 export default function LearningHub() {
@@ -22,7 +23,8 @@ export default function LearningHub() {
     return TOPICS.filter(t =>
       t.title.toLowerCase().includes(q) ||
       t.category.toLowerCase().includes(q) ||
-      t.content.toLowerCase().includes(q)
+      t.content?.toLowerCase().includes(q) ||
+      t.whyItMatters?.toLowerCase().includes(q)
     );
   }, [searchQuery]);
 
@@ -76,7 +78,7 @@ export default function LearningHub() {
           setActiveTab={setActiveTab}
         />
 
-        {/* Content */}
+        {/* Content area */}
         <div ref={contentRef} style={{ flex: 1, overflowY: "auto", padding: "20px 24px 40px" }}>
           {!topic ? (
             <WelcomeScreen />
@@ -86,6 +88,8 @@ export default function LearningHub() {
             <ExamplesTab topic={topic} />
           ) : activeTab === "quiz" ? (
             <QuizTab topic={topic} />
+          ) : activeTab === "flashcards" ? (
+            <FlashcardsTab topic={topic} />
           ) : null}
         </div>
       </div>
